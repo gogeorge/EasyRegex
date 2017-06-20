@@ -57,8 +57,30 @@ if (b.match(not('numbers') + not('letters'))) {
 
 | Functions  | Usage |
 | ------------- | ------------- |
-|```has(type)```  | Parameters that can be used to check if a digit is in a string: 'numbers' or 'digits' or 'num'. <br />For example: ```has('numbers')``` or ```has('digits')```  <br />Parameters used to check if a character is in a string: 'letters' or 'char'. <br /> For example: ```has('letters')``` or ```has('char')```|
+|```has(type)```  | Parameters that can be used to check if a digit is in a string: 'numbers' or 'digits' or 'num'. <br />For example: ```has('numbers')``` or ```has('digits')```  <br />Parameters used to check if a character is in a string: 'letters' or 'char'. <br /> For example: ```has('letters')``` or ```has('char')``` |
+
+<!-- hasString -->
+
 | ```hasString(string)```  | The parameter ```string``` is used to as an input to insert a string. <br />For example: <br /> <br />```var c = "Hasta la vista";```<br /><br />```//the following functions will match the "Hasta la vista"```<br /><br />```hasString('Hasta')```<br />```hasString('Hasta la')```<br /><br />```//the following functions will NOT match the "Hasta la vista"``` <br /><br />```hasString('sta')``` <br />```hasString('a vist')``` |
+
+<!-- not -->
+
 |```not(type)```| Parameters that can be used to check if a digit is **not** in a string: 'numbers', 'digits' or 'num'. <br />For example: ```not('numbers')``` or ```not('digits')```  <br />Parameter used to check if a character is **not** in a string: 'letters', 'char'. <br /> For example: ```not('letters')``` or ```not('char')``` <br /> If ```var d = '123';``` then ```not('letters')``` will be true since there are no letters in that string |
+
+<!-- notString -->
+
 |```notString(string)``` | Opposite of ```hasString()```. It will check if a string does **not** contain the value of the ```string``` parameter. For example: <br /> ```var e = 'one two three';``` <br /> ```if (e.match(notString('four'))) {```<br /> ```//code...``` <br /> ```}``` <br /><br /> ```notString('four')``` will be true since ```var e``` does not contain the word 'four'. <br /> Also a phrase can be used: ```notString('four five')``` will also be true. |
+
+<!-- or -->
+
+|```or()```| This has no parameter. All it does is act as an OR operator. For example:<br /> ```has('numbers') + or() + has('letters')```<br /> Which means even if there are no numbers in a string, if there are letters this combination will still be true. |
+
+<!-- atLeastOne -->
+
+|```atLeastOne(type)```| This is the equivalent of ```n+``` quantifier. So if there is more than occurrence of the value of the ```type``` parameter then the function will be true. For example: <br /> ```var f = 'car bus car car';``` <br /> ```atLeastOne('car')``` will be true since there are 3 occurrences of 'car'. |
+
+<!-- showRegex -->
+
+|```showRegex(type)``` | The value of the parameter (consisted of functions from the easy-regex.js script) will be turned into regular expressions. For example: <br /> ```showRegex("has('numbers') + not('letters') + or() + notString('hello world')")``` <br /> Will return:<br />
+```"(?=.*[0-9])(?=.*^([^a-zA-Z]*)$)|(?=.*^(?!.*hello world).*$)"```|
 
