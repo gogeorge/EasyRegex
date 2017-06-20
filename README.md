@@ -48,12 +48,13 @@ Without the EasyRegex library the same code would look like this:
 ```javascript
 var a = "example@gmail.com lorem ipsum etc example@yahoo.com";
 
-if (a.match('.*\b@gmail\b.*)') || (a.match('.*\b@yahoo\b.*') && a.match('.*^(?!.*.gr).*$')))) {
+if (a.match('.*\b@gmail\b.*') || (a.match('.*\b@yahoo\b.*') && a.match('.*^(?!.*.gr).*$'))) {
   console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
 } else {
   console.log('did not match');
 }
 ```
+Which is way more complicated
 
 - To check if a string doesn't have digits or characters
 
