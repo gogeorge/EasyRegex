@@ -58,5 +58,5 @@ if (b.match(not('numbers') + not('letters'))) {
 | Functions  | Usage |
 | ------------- | ------------- |
 |```has(type)```  | Parameters that can be  used to find a digit in a string: 'numbers', 'digits' or 'num'. <br />For example: ```has('numbers')``` or ```has('digits')```  <br />Parameter used to find a character in a string: 'letters', 'char'. <br /> For example: ```has('letters')``` or ```has('char')```|
-| ```hasString(string)```  | The parameter ```string``` is used to as an input to insert a string. <br />For example: <br />var c = "Hasta la vista";<br />//the following will match the "Hasta la vista"<br />hasString('Hasta')<br />hasString('Hasta la')<br /><br />//the following will *not* match the "Hasta la vista" <br />hasString('sta') <br />hasString('a vist') |
+| ```hasString(string)```  | The parameter ```string``` is used to as an input to insert a string. <br />For example: <br /> <br />```var c = "Hasta la vista";```<br /><br />```//the following will match the "Hasta la vista"```<br /><br />```hasString('Hasta')```<br />```hasString('Hasta la')```<br /><br />```//the following will *not* match the "Hasta la vista"``` <br /><br />```hasString('sta')``` <br />```hasString('a vist')``` |
 
