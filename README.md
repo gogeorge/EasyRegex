@@ -76,5 +76,8 @@ if (b.match(not('numbers') + not('letters'))) {
 
 ## Additional Information
 
-- For a AND operator for add two or more functions use ```+``` like this ```has('numbers') **+** not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
+- For a AND operator for add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
 
+## License
+
+The EasyRegex JavaScript library is under the MIT License
