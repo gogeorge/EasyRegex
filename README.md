@@ -57,15 +57,11 @@ if (b.match(not('numbers') + not('letters'))) {
 
 | Functions  | Usage |
 | ------------- | ------------- |
-|
-```javascript 
-has(type)
-```  
-| Parameters tha can be  used to find a digit in a string: 'numbers', 'digits' or 'num'.  
-For example: ```javascript has('numbers')``` or ```javascript has('digits')```  
+|```has(type)```  | Parameters tha can be  used to find a digit in a string: 'numbers', 'digits' or 'num'.  
+For example: ```has('numbers')``` or ```has('digits')```  
 Parameter used to find a character in a string: 'letters', 'char'.  
-For example: ```javascript has('letters')``` or ```javascript has('char')```|
-| ```javascript hasString(string)```  | The parameter ```string``` is used to as an input to insert a string.  For example:  
+For example: ```has('letters')``` or ```has('char')```|
+| ```hasString(string)```  | The parameter ```string``` is used to as an input to insert a string.For example:  
 ```javascript
 var c = "Hasta la vista";
 
