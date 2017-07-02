@@ -28,18 +28,6 @@ function wordSize(size) {
 	var r = new RegExp('(?=[a-zA-Z]{' + size + '})', 'gi');
 	return r;
 }
-/*function beginsWith(type) {
-	eval("var r = new RegExp('\b'" + type + ", 'g');");
-	return r;
-}
-function endsWith(type) {
-	var r = new RegExp(eval("'\B'" + type + ", 'g')");
-	return r;
-}*/
 function showRegex(type) { 
 	return eval(type);
 }
-/* 
-	to do list:
-		- create aliases that actually work
-*/
