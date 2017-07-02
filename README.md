@@ -90,6 +90,28 @@ if (b.match(not('numbers') + not('letters'))) {
 |```atLeastOne(type)```| This is the equivalent of ```n+``` quantifier. So if there is more than occurrence of the value of the ```type``` parameter then the function will be true. For example: <br /> ```var f = 'car bus car car';``` <br /> ```atLeastOne('car')``` will be true since there are three occurrences of 'car'. |
 |```showRegex(type)``` | The value of the parameter (consisted of functions from the easy-regex.js script) will be turned into regular expressions. For example: <br /> ```showRegex("has('numbers') + not('letters') + or() + notString('hello world')")``` <br /> Will return:<br /> ```(?=.*[0-9])(?=.*^([^a-zA-Z]*)$)\|(?=.*^(?!.*hello world).*$)``` |
 
+## Using the second parameter of the function
+
+```javascript
+var menu = "lemon juice, apple juice, mango juice, cherry juice. normal burger, cheeseburger";
+
+console.log("menu has " + hasString('juice', menu) + " juices and " + hasString('burger', menu) + " burgers");
+
+//output => menu has 4 juices and 2 burgers
+```
+
+This is useful when you need to use regular expressions to find how many times a phrase, word or digit has been used in a string.
+
+Here is another example: 
+
+```javascript
+var errorFile = "error invalid token, error invalid regex, logic error, syntax error";
+
+console.log(hasString('error', errorFile) + ' errors have been found in this file');
+
+//output => 4 errors have been found in this file
+```
+
 ## Additional Information
 
 - For a AND operator for add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
