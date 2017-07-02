@@ -8,6 +8,7 @@ First beta version of this library
 
 ## v.05
 
-- Added a second parameter to the functinons to check how many times ex: 'hello' has been found in a string by ```hasString('hello', '<name_of_the_variable_which_contains_the_string>')```
+- Added a second parameter to the functions to check how many times ex: 'hello' has been found in a string by ```hasString('hello', '<name_of_the_variable_which_contains_the_string>')```
+
 - Added ```endsWith()``` and ```beginsWith()```
 
