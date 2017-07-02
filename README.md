@@ -1,5 +1,8 @@
 # EasyRegex
 
+![](http://imgur.com/a/uBBKF)
+
+
 EasyRegex is a javascript library that is consisted of several functions that return regular expressions. The functions are easy to remember and have appropriate names for example:
 
 ```javascript
