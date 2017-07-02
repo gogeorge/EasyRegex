@@ -88,6 +88,9 @@ if (b.match(not('numbers') + not('letters'))) {
 |```notString(string)``` | Opposite of ```hasString()```. It will check if a string does **not** contain the value of the ```string``` parameter. For example: <br /> ```var e = 'one two three';``` <br /> ```if (e.match(notString('four'))) {```<br /> ```//code...``` <br /> ```}``` <br /><br /> ```notString('four')``` will be true since ```var e``` does not contain the word 'four'. <br /> Also a phrase can be used: ```notString('four five')``` will also be true. |
 |```or()```| This has no parameter. All it does is act as an OR operator. For example:<br /> ```has('numbers') + or() + has('letters')```<br /> Which means even if there are no numbers in a string, if there are letters this combination will still be true. |
 |```atLeastOne(type)```| This is the equivalent of ```n+``` quantifier. So if there is more than occurrence of the value of the ```type``` parameter then the function will be true. For example: <br /> ```var f = 'car bus car car';``` <br /> ```atLeastOne('car')``` will be true since there are three occurrences of 'car'. |
+|```beginsWith(type)```| The parameter can be used to check if a word begins with something specific. For example <br /> ```beginsWith('ca')``` will search for any words in the string that begin with 'ca' like car and carpet. |
+|```endsWith(type)```| The parameter can be used to check if a word ends with something specific. |
+|```wordSize(size)```| The parameter can be used to check if there are any words that have more than ```size``` characters. For example <br /> ```wordSize('3')``` will check if there are words or digits that have 3 characters or integers like 'carpet' has 5 and '966 000' has 6.| 
 |```showRegex(type)``` | The value of the parameter (consisted of functions from the easy-regex.js script) will be turned into regular expressions. For example: <br /> ```showRegex("has('numbers') + not('letters') + or() + notString('hello world')")``` <br /> Will return:<br /> ```(?=.*[0-9])(?=.*^([^a-zA-Z]*)$)\|(?=.*^(?!.*hello world).*$)``` |
 
 ## Using the second parameter of the function
@@ -105,12 +108,13 @@ This is useful when you need to use regular expressions to find how many times a
 Here is another example: 
 
 ```javascript
-var errorFile = "error invalid token, error invalid regex, logic error, syntax error";
+var errorFile = "400 bad request, 401 unauthorized, 402 payment required, 403 forbidden, 404 not found, 308 permanent redirect, 200 OK, 201 created";
 
-console.log(hasString('error', errorFile) + ' errors have been found in this file');
+console.log(beginsWith('4', errorFile) + ' CLIENT errors have been found in this file');
 
-//output => 4 errors have been found in this file
+//output => 5 CLIENT errors have been found in this file
 ```
+This will search for anything that begins with 4 (so any client errors since they all have a 4 at the start). Notice how other errors like 308 or any success like 200 and 201 are not in the output since they do not begin with a 4.
 
 ## Additional Information
 
