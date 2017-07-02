@@ -118,7 +118,11 @@ This will search for anything that begins with 4 (so any client errors since the
 
 ## Additional Information
 
-- For a AND operator for add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
+- For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
+
+## Warnings
+
+- For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
 
 ## License
 
