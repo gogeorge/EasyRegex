@@ -1,6 +1,6 @@
 # EasyRegex
 
-![](http://http://georgevaltas.kissr.com/easyregex_example.gif)
+![](https://media.giphy.com/media/xUA7aRtxDdkbhiV53W/giphy.gif)
 
 
 EasyRegex is a javascript library that is consisted of several functions that return regular expressions. The functions are easy to remember and have appropriate names for example:
