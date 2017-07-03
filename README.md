@@ -2,8 +2,6 @@
 
 ![](https://media.giphy.com/media/xUA7aRtxDdkbhiV53W/giphy.gif)
 
-<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://media.giphy.com/media/xUA7aRtxDdkbhiV53W/giphy.gif" width="200" height="400" />
-
 
 EasyRegex is a javascript library that is consisted of several functions that return regular expressions. The functions are easy to remember and have appropriate names for example:
 
