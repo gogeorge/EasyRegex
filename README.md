@@ -3,6 +3,8 @@
 ![](https://media.giphy.com/media/xUA7aRtxDdkbhiV53W/giphy.gif)
 
 
+![](easyregex_example.gif)
+
 EasyRegex is a javascript library that is consisted of several functions that return regular expressions. The functions are easy to remember and have appropriate names for example:
 
 ```javascript
