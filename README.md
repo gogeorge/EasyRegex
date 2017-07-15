@@ -123,6 +123,14 @@ This will search for anything that begins with 4 (so any client errors since the
 
 - For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
 
+## Releases
+
+Check the releases here : 
+https://github.com/gogeorge/EasyRegex/releases
+
+or on this branch :
+https://github.com/gogeorge/EasyRegex/tree/versions/v
+
 ## License
 
 The EasyRegex JavaScript library is under the MIT License
