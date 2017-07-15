@@ -19,3 +19,9 @@ First beta version of this library
 ## v.07
 
 - Depreciated ```hasString()``` and ```notString()```. To use them just use ```has()``` and ```not()```
+
+## v.08
+
+- Fixed all the bugs from 0.7 
+
+- Now all functions will check if there are any meta character in the parameters and if there are, a backlash behind them will be added to prevent errors
