@@ -94,6 +94,3 @@ function atLeastOne(string) {
 	}
 	return new RegExp('(?=' + string + '+)', 'g')
 }
-function showRegex(string) { 
-	return eval(string)
-}
