@@ -118,7 +118,9 @@ This will search for anything that begins with 4 (so any client errors since the
 ## Additional Information
 
 
-- ```has()```  and ```not()``` can be used in many ways which raises this issue:
+- ### Issue with ```has()```  and ```not()```
+
+```has()```  and ```not()``` can be used in many ways which raises this issue:
 
 ```javascript 
   has('numbers')  //will check for any numbers in the specified string
@@ -137,10 +139,11 @@ Therefore it is now possible to do this:
 Same goes for the other words : digits, num, letters and char
 
 
-- For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
+- ### Logic Operators
 
+For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
 
-- For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
+Furthermore ```atLeastOne()``` cannot be combined with any operators like ```or()``` and ```+```.
 
 ## Releases
 
