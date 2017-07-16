@@ -117,10 +117,6 @@ This will search for anything that begins with 4 (so any client errors since the
 
 ## Additional Information
 
-- For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
-
-
-- For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
 
 - ```has()```  and ```not()``` can be used in many ways which raises this issue:
 
@@ -138,7 +134,13 @@ Therefore it is now possible to do this:
   has('$numbers') // will check for the word 'numbers'
 ``` 
 
-same goes for the other words : digits, num, letters and char
+Same goes for the other words : digits, num, letters and char
+
+<br />
+- For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
+<br />
+
+- For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
 
 ## Releases
 
