@@ -136,9 +136,9 @@ Therefore it is now possible to do this:
 
 Same goes for the other words : digits, num, letters and char
 
-<br />
+
 - For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
-<br />
+
 
 - For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
 
