@@ -25,3 +25,7 @@ First beta version of this library
 - Fixed all the bugs from 0.7 
 
 - Now all functions will check if there are any meta character in the parameters and if there are, a backlash behind them will be added to prevent errors
+
+## v1.0
+
+- The library is not in beta anymore
