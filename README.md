@@ -38,7 +38,7 @@ What makes this library more useful is that you can combine the functions to mak
 ```javascript
 var a = "example@gmail.com lorem ipsum etc example@yahoo.com";
 
-if (a.match(hasString('@gmail') + or() + hasString('@yahoo') + notString('.gr'))) {
+if (a.match(has('@gmail') + or() + has('@yahoo') + not('.gr'))) {
   console.log("string contains either '@gmail' or '@yahoo' and not '.gr'");
 } else {
   console.log('did not match');
@@ -68,29 +68,29 @@ if (b.match(not('numbers') + not('letters'))) {
 }
 ```
 
-## Types of functions
+## List of functions
 <!-- 
   content of the table:
   - has()
   - not()
-  - hasString() 
-  - notString()
+  - hasString() dep
+  - notString() dep
   - or()
   - atLeastOne()
-  - showRegex()
+  - showRegex() dep
 -->
 | Functions  | Usage |
 | ------------- | ------------- |
-|```has(type)```  | - Parameters that can be used to check if a digit is in a string: 'numbers' or 'digits' or 'num'. <br />For example: ```has('numbers')``` or ```has('digits')```  <br /><br />- Parameters used to check if a character is in a string: 'letters' or 'char'. <br /> For example: ```has('letters')``` or ```has('char')```  <br /><br />- The parameter ```type``` is used to as an input to insert a string. <br />For example: <br /> <br />```var c = "Hasta la vista";```<br /><br />```//the following functions will match the "Hasta la vista"```<br /><br />```hasString('Hasta')```<br />```hasString('Hasta la')```<br /><br />```//the following functions will NOT match the "Hasta la vista"``` <br /><br />```hasString('sta')``` <br />```hasString('a vist')```|
+|```has(string)```  | - Parameters that can be used to check if a digit is in a string: 'numbers' or 'digits' or 'num'. <br />For example: ```has('numbers')``` or ```has('digits')```  <br /><br />- Parameters used to check if a character is in a string: 'letters' or 'char'. <br /> For example: ```has('letters')``` or ```has('char')```  <br /><br />- The parameter ```string``` is used to as an input to insert a string. <br />For example: <br /> <br />```var c = "Hasta la vista";```<br /><br />```//the following functions will match the "Hasta la vista"```<br /><br />```hasString('Hasta')```<br />```hasString('Hasta la')```<br /><br />```//the following functions will NOT match the "Hasta la vista"``` <br /><br />```hasString('sta')``` <br />```hasString('a vist')```|
 | ```hasString(string)``` <em>DEPRECIATED</em>  | From v.07 and on, ```has()``` should be used |
-|```not(type)```| - Parameters that can be used to check if a digit is **not** in a string: 'numbers', 'digits' or 'num'. <br />For example: ```not('numbers')``` or ```not('digits')```  <br /><br />- Parameter used to check if a character is **not** in a string: 'letters', 'char'. <br /> For example: ```not('letters')``` or ```not('char')``` <br /> If ```var d = '123';``` then ```not('letters')``` will be true since there are no letters in that string <br /><br />- Opposite of ```has()```. It will check if a string does **not** contain the value of the ```type``` parameter. For example: <br /> ```var e = 'one two three';``` <br /> ```if (e.match(not('four'))) {```<br /> ```//code...``` <br /> ```}``` <br /><br /> ```not('four')``` will be true since ```var e``` does not contain the word 'four'. <br /> Also a phrase can be used: ```not('four five')``` will also be true. |
+|```not(string)```| - Parameters that can be used to check if a digit is **not** in a string: 'numbers', 'digits' or 'num'. <br />For example: ```not('numbers')``` or ```not('digits')```  <br /><br />- Parameter used to check if a character is **not** in a string: 'letters', 'char'. <br /> For example: ```not('letters')``` or ```not('char')``` <br /> If ```var d = '123';``` then ```not('letters')``` will be true since there are no letters in that string <br /><br />- Opposite of ```has()```. It will check if a string does **not** contain the value of the ```string``` parameter. For example: <br /> ```var e = 'one two three';``` <br /> ```if (e.match(not('four'))) {```<br /> ```//code...``` <br /> ```}``` <br /><br /> ```not('four')``` will be true since ```var e``` does not contain the word 'four'. <br /> Also a phrase can be used: ```not('four five')``` will also be true. |
 |```notString(string)``` <em>DEPRECIATED</em> | From v.07 and on, ```not()``` should be used |
 |```or()```| This has no parameter. All it does is act as an OR operator. For example:<br /> ```has('numbers') + or() + has('letters')```<br /> Which means even if there are no numbers in a string, if there are letters this combination will still be true. |
-|```atLeastOne(type)```| This is the equivalent of ```n+``` quantifier. So if there is more than occurrence of the value of the ```type``` parameter then the function will be true. For example: <br /> ```var f = 'car bus car car';``` <br /> ```atLeastOne('car')``` will be true since there are three occurrences of 'car'. |
-|```beginsWith(type)```| The parameter can be used to check if a word begins with something specific. For example <br /> ```beginsWith('ca')``` will search for any words in the string that begin with 'ca' like car and carpet. |
-|```endsWith(type)```| The parameter can be used to check if a word ends with something specific. |
+|```atLeastOne(string)```| This is the equivalent of ```n+``` quantifier. So if there is more than occurrence of the value of the ```string``` parameter then the function will be true. For example: <br /> ```var f = 'car bus car car';``` <br /> ```atLeastOne('car')``` will be true since there are three occurrences of 'car'. |
+|```beginsWith(string)```| The parameter can be used to check if a word begins with something specific. For example <br /> ```beginsWith('ca')``` will search for any words in the string that begin with 'ca' like car and carpet. |
+|```endsWith(string)```| The parameter can be used to check if a word ends with something specific. |
 |```wordSize(size)```| The parameter can be used to check if there are any words that have more than ```size``` characters. For example <br /> ```wordSize('3')``` will check if there are words or digits that have 3 characters or integers like 'carpet' has 5 and '966 000' has 6.| 
-|```showRegex(type)``` | The value of the parameter (consisted of functions from the easy-regex.js script) will be turned into regular expressions. For example: <br /> ```showRegex("has('numbers') + not('letters') + or() + notString('hello world')")``` <br /> Will return:<br /> ```(?=.*[0-9])(?=.*^([^a-zA-Z]*)$)\|(?=.*^(?!.*hello world).*$)``` |
+|```showRegex(string)``` <em>DEPRECIATED</em> | Depreciated because it is no longer useful |
 
 ## Using the second parameter of the function
 
@@ -119,9 +119,26 @@ This will search for anything that begins with 4 (so any client errors since the
 
 - For a AND operator to add two or more functions use ```+``` like this ```has('numbers') + not('letters')```. In other words, there isn't anything like ```and()``` just like there is for the OR operator ```or()```.
 
-## Warnings
 
 - For now ```atLeastOne()``` cannot be combined with ```or()``` or ```+```.
+
+- ```has()```  and ```not()``` can be used in many ways which raises this issue:
+
+```javascript 
+  has('numbers')  //will check for any numbers in the specified string
+``` 
+
+However if someone wants to check if a string contains the <b>word</b> 'numbers' by typing the following ```has('numbers')``` it check if the string contains numbers not the word 'numbers'.
+
+Therefore it is now possible to do this: 
+
+```javascript 
+  has('numbers')  //will check for any numbers in the specified string
+
+  has('$numbers') // will check for the word 'numbers'
+``` 
+
+same goes for the other words : digits, num, letters and char
 
 ## Releases
 
