@@ -2,6 +2,8 @@
 
 <!-- add a gif -->
 
+Go to this [link](https://github.com/gogeorge/EasyRegex/blob/master/README-v1.md) for the documentation of v1.1 and below
+
 EasyRegex is a javascript library that is consisted of several string prototype methods that return regular expressions. The methods are easy to remember and have appropriate names for example:
 
 ```javascript
