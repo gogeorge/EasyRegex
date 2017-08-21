@@ -98,6 +98,8 @@ string.has('a word') && string.has('another word')
 
 ## Using the occurrences() function
 
+### Warning: The occurrences() function uses eval()
+
 ```javascript
 var menu = "lemon juice, apple juice, mango juice, cherry juice. normal burger, cheeseburger";
 
@@ -130,6 +132,8 @@ if (occurrences("errorFile.has('error')") > 3) {
 ```
 
 ## Using the not() function
+
+### Warning: The not() function uses eval()
 
 Put any method, with an exception of all non-parameter methods as well as has() and not, inside the not() function to check if the regular expression does **not** match for example:
 
