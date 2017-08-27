@@ -29,3 +29,7 @@ First beta version of this library
 ## v1.0
 
 - The library is not in beta anymore
+
+## v2.0
+
+- many functions from v1.0 have been turned to string methods
