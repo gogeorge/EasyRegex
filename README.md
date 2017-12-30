@@ -40,7 +40,7 @@ What makes this library more useful is that you can combine the methods to make 
 Check if a string contains certain types of meals and check if some are not there at all:
 
 ```javascript
-var meals = 'sandwich with, burger with sauce, hamburger, meatballs';
+var meals = 'sandwich, burger with sauce, hamburger, meatballs';
 
 if (meals.has('sandwich and burger with sauce') && meals.not('salad')) {
   // string contains the substrings 'sandwich' and 'burger with sauce' but not the substring/word 'salad'
@@ -50,7 +50,7 @@ if (meals.has('sandwich and burger with sauce') && meals.not('salad')) {
 Without the EasyRegex library the same code would look like this:
 
 ```javascript
-var meals = 'sandwich with, burger with sauce, hamburger, meatballs';
+var meals = 'sandwich, burger with sauce, hamburger, meatballs';
 
 if (meals.includes('sandwich') && meals.includes('burger with sauce') && meals.match(/.*^(?!.*salad).*$/)) {
   // string contains the substrings 'sandwich' and 'burger with sauce' but not the substring/word 'salad'
